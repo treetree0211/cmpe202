@@ -1,7 +1,6 @@
 In this project, I created variables as followings to support 3 Model Gumball Machines:
 
-1. int type : parameter for gumball Machine to differentiate 3 model machines,
-type 1 for machine that only needs one quarter; type 2 for machine that needs two quarters; type 3 for machine that needs 50 cents, including any kinds of coin
+1. int type : parameter for storing machine types, type 1 for machine that only needs one quarter; type 2 for machine that needs two quarters; type 3 for machine that needs 50 cents, including any kinds of coin
 
 2. int cost : parameter for storing how many coins each machine needs
 
