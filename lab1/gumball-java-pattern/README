@@ -1,0 +1,71 @@
+In this project, I created variables as followings to support 3 Model Gumball Machines:
+
+1. int type : parameter for gumball Machine to differentiate 3 model machines,
+type 1 for machine that only needs one quarter; type 2 for machine that needs two quarters; type 3 for machine that needs 50 cents, including any kinds of coin
+
+2. int cost : parameter for storing how many coins each machine needs
+
+3. int quarterNum : parameter for storing how many quarter already inserted
+
+4. int collectCoinSum : parameter for storing how much money already inserted
+
+****************************************************************************
+
+I updated functions as followings
+
+1. void insertCoin(int coin) : I added parameter for this function, according to coin value, I increment quarterNum if coin is 25, and increment collectCoinSum as well. For other kinds of coins, increment collectCoinSum; When it is in the noCoinState, I updated the function to display how much money we need for differnent machine and what kinds of coin we inserted.
+
+2. void turnCrunk() : According to different type of machines, I compare the quarterNum with quarter needs and collectCoinSum with machine cost. If both meets requirements and gumball exists, user get gumball. Otherwise, check if needs more coins or gumballs
+
+*******************************************************************************
+The running scripts are as followings
+
+*********************
+Mighty Gumball, Inc.
+Java-enabled Standing Gumball Model #2004
+Inventory: 5 gumballs
+Machine is waiting for coin
+
+This gumball needs a quarter! Please insert a quarter!
+You insert a quarter
+You turned...
+A gumball comes rolling out the slot...
+
+*********************
+Mighty Gumball, Inc.
+Java-enabled Standing Gumball Model #2004
+Inventory: 5 gumballs
+Machine is waiting for coin
+
+This gumball needs 2 quarters! Please insert 2 quarters!
+You insert a quarter
+You insert a quarter
+You turned...
+A gumball comes rolling out the slot...
+
+*********************
+Mighty Gumball, Inc.
+Java-enabled Standing Gumball Model #2004
+Inventory: 5 gumballs
+Machine is waiting for coin
+
+This gumball needs 50 cents! Please insert a coin!
+You insert a dime
+You insert a dime
+You insert a quarter
+You insert a nickel
+You turned...
+A gumball comes rolling out the slot...
+
+*********************
+Mighty Gumball, Inc.
+Java-enabled Standing Gumball Model #2004
+Inventory: 5 gumballs
+Machine is waiting for coin
+
+This gumball needs 50 cents! Please insert a coin!
+You insert a dime
+You insert a dime
+You insert a quarter
+You turned...
+You need more coins
