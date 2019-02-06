@@ -3,31 +3,49 @@
 public class GumballMachine {
  
 	State soldOutState;
-	State noQuarterState;
-	State hasQuarterState;
+	State noCoinState;
+	State hasCoinState;
 	State soldState;
  
 	State state = soldOutState;
 	int count = 0;
+	// add machine type
+	int type;
+	/* Type 1 : accept only quarters;
+       Type 2 : accept two quarters;
+       Type 3 : accept all coins;
+    */
+    int quarterNum;
+    int cost;
+    int collectCoinSum;
  
-	public GumballMachine(int numberGumballs) {
+	public GumballMachine(int numberGumballs, int type) {
 		soldOutState = new SoldOutState(this);
-		noQuarterState = new NoQuarterState(this);
-		hasQuarterState = new HasQuarterState(this);
+		noCoinState = new NoCoinState(this);
+		hasCoinState = new HasCoinState(this);
 		soldState = new SoldState(this);
+		this.type = type;
+		this.collectCoinSum = 0;
+		this.quarterNum = 0;
+		if (this.type == 1) this.cost = 25;
+        else {
+          this.cost = 50; 
+        }
 
 		this.count = numberGumballs;
  		if (numberGumballs > 0) {
-			state = noQuarterState;
+			state = noCoinState;
 		} 
 	}
+
+
  
-	public void insertQuarter() {
-		state.insertQuarter();
+	public void insertCoin(int coin) {
+		state.insertCoin(coin);
 	}
  
-	public void ejectQuarter() {
-		state.ejectQuarter();
+	public void ejectCoin() {
+		state.ejectCoin();
 	}
  
 	public void turnCrank() {
@@ -52,7 +70,7 @@ public class GumballMachine {
  
 	void refill(int count) {
 		this.count = count;
-		state = noQuarterState;
+		state = noCoinState;
 	}
 
     public State getState() {
@@ -63,12 +81,12 @@ public class GumballMachine {
         return soldOutState;
     }
 
-    public State getNoQuarterState() {
-        return noQuarterState;
+    public State getNoCoinState() {
+        return noCoinState;
     }
 
-    public State getHasQuarterState() {
-        return hasQuarterState;
+    public State getHasCoinState() {
+        return hasCoinState;
     }
 
     public State getSoldState() {
@@ -77,6 +95,7 @@ public class GumballMachine {
  
 	public String toString() {
 		StringBuffer result = new StringBuffer();
+		result.append("\n*********************");
 		result.append("\nMighty Gumball, Inc.");
 		result.append("\nJava-enabled Standing Gumball Model #2004");
 		result.append("\nInventory: " + count + " gumball");
