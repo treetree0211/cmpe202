@@ -2,9 +2,9 @@ In this project, I created variables as followings to support 3 Model Gumball Ma
 
 1. int type : parameter for storing machine types, type 1 for machine that only needs one quarter; type 2 for machine that needs two quarters; type 3 for machine that needs 50 cents, including any kinds of coin
 
-2. int cost : parameter for storing how many coins each machine needs
+2. int cost : parameter for storing how much money each machine needs
 
-3. int quarterNum : parameter for storing how many quarter already inserted
+3. int quarterNum : parameter for storing how many quarters already inserted
 
 4. int collectCoinSum : parameter for storing how much money already inserted
 
@@ -12,6 +12,6 @@ In this project, I created variables as followings to support 3 Model Gumball Ma
 
 I updated functions as followings
 
-1. void insertCoin(int coin) : I added parameter for this function, according to coin value, I increment quarterNum if coin is 25, and increment collectCoinSum as well. For other kinds of coins, increment collectCoinSum
+1. void insertCoin(int coin) : I add parameter coin value for this function. According to coin value, I increment quarterNum if coin is 25, and increment collectCoinSum as well. For other kinds of coins, increment collectCoinSum
 
-2. void turnCrunk() : According to different type of machines, I compare the quarterNum with quarter needs and collectCoinSum with machine cost. If both meets requirements and gumball exists, user get gumball. Otherwise, check if needs more coins or gumballs
+2. void turnCrunk() : According to different type of machines, I check quarterNum with machine needs and collectCoinSum with machine cost. If both meets requirements and gumball exists, user get gumball. Otherwise, check if needs more coins or gumballs
