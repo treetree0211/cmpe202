@@ -1,17 +1,19 @@
-1. list of CRC Cards
+##1. list of CRC Cards
 
-1) ClassName: Customer
+1) ClassName: **Customer**
     
-   Responsibility: a) Know name, cell phone and number of peope in the party
+   Responsibility: 
+   				   a) Know name, cell phone and number of peope in the party
 
    				   b) Send response whether confirm or leave when table is ready
 
    Collaborator: WaitlistManagementSystem
 
 
-2) ClassName:  WaitlistManagementSystem
+2) ClassName:  **WaitlistManagementSystem**
 
-   Responsibility: a) Know customer waitlistmanagementsystem queue and the table needs for the peek of the queue
+   Responsibility: 
+   				   a) Know customer waitlistmanagementsystem queue and the table needs for the peek of the queue
 
    				   b) Add new customer to waitlistmanagementsystem queue
 
@@ -30,4 +32,4 @@
    Collaborator:  Customer, TableManagementSystem
 
 
-3) ClassName:  TableManagementSystem
+3) ClassName:  **TableManagementSystem**
