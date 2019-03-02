@@ -1,4 +1,11 @@
-##1. list of CRC Cards
+1. list of CRC Cards
+
+
+| **ClassName** | **Responsibility**    | **Collaborator**  |
+| ------------- |:-------------:| -----:|
+| Customer     | a) Know name, cell phone and number of peope in the party | WaitlistManagementSystem |
+|               | b) Send response whether confirm or leave when table is ready    |    |
+
 
 1) ClassName: **Customer**
     
