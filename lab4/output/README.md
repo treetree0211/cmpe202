@@ -41,8 +41,10 @@
 
 
 
-**2. Observer Design Pattern**
+**2. State Pattern && Observer Design Pattern**
 
-I used observer design pattern. The observer is waitlistManagementSystem. Whenever the tablemanagement receives <br>
-table updated status, it will notify waitlistManagementSystem observer, and the observer will send message to customers <br>
-for futher interactions.
+I used both state pattern and observer design pattern. 
+
+##For the state Pattern, the table has state ready and state not available. When table's state becomes available and tablemanagementsystem get its state, tablemanagementsystem will know if a needed table is ready. 
+
+##For the observer Pattern, the observer is waitlistManagementSystem. Whenever the tablemanagement receives table updated status, it will notify waitlistManagementSystem observer, and the observer will send message to customers for futher interactions.
