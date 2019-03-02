@@ -1,4 +1,4 @@
-1. **list of CRC Cards**
+**1. list of CRC Cards**
 
 
 | **ClassName** | **Responsibility**    | **Collaborator**  |
@@ -40,6 +40,9 @@
 |               |2. Provide table status |    |
 
 
-2. **Observer Design Pattern**
 
+**2. Observer Design Pattern**
 
+I used observer design pattern. The observer is waitlistManagementSystem. Whenever the tablemanagement receives <br>
+table updated status, it will notify waitlistManagementSystem observer, and the observer will send message to customers <br>
+for futher interactions.
