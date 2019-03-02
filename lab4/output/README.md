@@ -45,6 +45,6 @@
 
 I used both state pattern and observer design pattern. 
 
-##For the state Pattern, the table has state "ready" and state "not available". When the state is "ready", the tablemangementsystem can inform waitlistmanagementsystem to reserve a table or not. When tablemanagementsystem gets response about reserving a table, the state becomes "not avaiable".
+##For the state Pattern, the table has state "ready" and state "not available". When the state is "ready", the tablemangementsystem can inform waitlistmanagementsystem to reserve a table or not. When tablemanagementsystem gets response about reserving a table, the state becomes "not available".
 
 ##For the observer Pattern, the observer is waitlistManagementSystem. Whenever the tablemanagement receives table updated status, it will notify waitlistManagementSystem observer, and the observer will send message to customers for futher interactions.
