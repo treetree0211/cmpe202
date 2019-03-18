@@ -1,0 +1,1 @@
+The demo run output of BlueJ is attached in /output as demo-receipt.png
