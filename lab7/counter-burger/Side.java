@@ -23,7 +23,7 @@ public class Side extends LeafDecorator
             if (i>0) desc += " + " + options[i] ;
             else desc = options[i] ;
         }        
-        return desc ;
+        return desc;
     }
     
 }
