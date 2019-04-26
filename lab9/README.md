@@ -15,7 +15,7 @@ For traditional java code, when we implement the strategy pattern, we need to cr
 	We are now using BubbleSort!
 	We are now using MergeSort!
 
-However, in Lambda expression, we dont need to create concrete strategy implementations because we can directly input method in Lambda expression, like
+However, in Lambda expression, we dont need to create concrete strategy implementations(and we dont need to create class and avoid using class declaration) because we can directly input method in Lambda expression, like
 
 	List<SortingStrategy> list = Arrays.asList(
 		() -> {System.out.println("We are now using BubbleSort!");},
